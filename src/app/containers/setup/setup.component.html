@@ -1,0 +1,47 @@
+<div id="setup" class="container full-height centered row">
+  <button
+    type="button"
+    class="step-back"
+    [disabled]="onFirstStep()">
+    &lt;
+  </button>
+
+  <ng-container [ngSwitch]="onStep">
+    <section *ngSwitchCase="1">
+      <h1 class="title">Select Difficulty</h1>
+      <input-radio-group
+        [radios]="selections.difficulty"
+        (selected)="select.difficulty($event)">
+      </input-radio-group>
+    </section>
+    <section *ngSwitchCase="2">
+      <fieldset id="objectives">
+
+      </fieldset>
+    </section>
+    <section *ngSwitchCase="3">
+      <fieldset id="game-length">
+
+      </fieldset>
+    </section>
+    <section *ngSwitchCase="4">
+      <fieldset>
+
+      </fieldset>
+    </section>
+    <section *ngSwitchCase="5">
+      <fieldset id="overloards">
+        <button type="button" class="action">
+          Start Game
+        </button>
+      </fieldset>
+    </section>
+  </ng-container>
+
+  <button id="step-next"
+    type="button"
+    class="step-next"
+    [disabled]="onLastStep()">
+    &gt;
+  </button>
+</div>

@@ -1,0 +1,124 @@
+html, body, p, a, button, li {
+  background-color: $_asphalt;
+  color: $_mint;
+  font-family: 'Geo', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 3px;
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: 125%;
+  outline-offset: -2px;
+  outline-width: 12px;
+  padding: 12px 0;
+  position: relative;
+  transition: color linear 0.25s;
+  width: 200px;
+
+  &:hover {
+    background-color: white;
+    color: $_asphalt;
+    outline-color: $_mint-glow;
+
+  }
+
+  &.selected {
+    color: $_asphalt;
+    background-color: $_mint;
+    border-color: $_mint;
+    outline-color: $_mint-glow;
+  }
+
+  &[disabled] {
+    cursor: default;
+    color: $_grey;
+    border-color: $_grey;
+  }
+
+  &.step-next,
+  &.step-back {
+    border: none;
+    font-size: 100px;
+    font-weight: normal;
+    transform: scaleY(3);
+
+    &:hover {
+      color: $_mint;
+      background-color: transparent;
+    }
+  }
+
+  i {
+    display: inline-block;
+    line-height: 24px;
+    position: relative;
+
+    span {
+      font-family: 'Geo', sans-serif;
+      vertical-align: bottom;
+      padding-left: 4px;
+    }
+  }
+}
+
+.action {
+  border-color: $_mint;
+  color: $_mint;
+
+  &:hover {
+    background-color: $_mint;
+    color: $_asphalt;
+  }
+}
+
+h1 {
+  font-size: 400%;
+}
+h2 {
+  font-size: 350%;
+}
+h3 {
+  font-size: 300%;
+}
+h4 {
+  font-size: 250%;
+}
+h5 {
+  font-size: 200%;
+}
+h6 {
+  font-size: 150%;
+}
+
+.container {
+  display: flex;
+  &.centered {
+    align-items: center;
+    justify-content: center;
+  }
+  &.column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+  }
+  &.row {
+    flex-direction: row;
+  }
+}
+
+
+.spaced {
+  justify-content: space-evenly;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}

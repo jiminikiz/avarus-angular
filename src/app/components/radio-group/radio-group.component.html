@@ -1,0 +1,12 @@
+<fieldset class="container" ngClass="classes">
+  <button class="radio"
+    [class.selected]="selected.value === radio.value"
+    *ngFor="let radio of radios; let i= index"
+    (click)="onClick({
+    $event: $event,
+    index: i,
+    radio: radio
+    })">
+    {{ radio.label }}
+  </button>
+</fieldset>

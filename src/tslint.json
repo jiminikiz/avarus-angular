@@ -1,0 +1,25 @@
+{
+    "extends": "../tslint.json",
+    "rules": {
+        "directive-selector": [
+            true,
+            "attribute",
+            "app",
+            "camelCase"
+        ],
+        "component-selector": [
+          true,
+          "element",
+          [
+            "avarus",
+            "game",
+            "main",
+            "settings",
+            "setup",
+            "app",
+            "input"
+          ],
+          "kebab-case"
+        ]
+    }
+}

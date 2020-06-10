@@ -1,0 +1,12 @@
+{
+  "TEXT": {
+    "main": {
+      "title": "Avarus",
+      "buttons": {
+        "play": "New Game",
+        "settings": "Settings",
+        "exit": "Exit"
+      }
+    }
+  }
+}
